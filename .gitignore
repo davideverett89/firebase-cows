@@ -1,3 +1,10 @@
+.vscode/
+.DS_Store
+package-lock.json
+dist/
+build/
+.firebase/
+
 # Logs
 logs
 *.log
