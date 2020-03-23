@@ -1,11 +1,10 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-const authDiv = $('#auth');
-const pastureDiv = $('#pasture');
-const logoutButton = $('#navbar-logout-button');
-
 const checkLoginStatus = () => {
+  const authDiv = $('#auth');
+  const pastureDiv = $('#pasture');
+  const logoutButton = $('#navbar-logout-button');
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // person is logged in
