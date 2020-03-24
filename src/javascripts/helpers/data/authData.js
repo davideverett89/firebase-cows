@@ -9,6 +9,7 @@ const checkLoginStatus = () => {
   const pastureDiv = $('#pasture');
   const logoutButton = $('#navbar-logout-button');
   const farmHouseDiv = $('#farmHouse');
+  const singleFarmerDiv = $('#single-farmer');
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // person is logged in
@@ -16,6 +17,7 @@ const checkLoginStatus = () => {
       pastureDiv.removeClass('hide');
       farmHouseDiv.removeClass('hide');
       logoutButton.removeClass('hide');
+      singleFarmerDiv.removeClass('hide');
       pasture.buildCows();
       farmHouse.buildFarmers();
     } else {
