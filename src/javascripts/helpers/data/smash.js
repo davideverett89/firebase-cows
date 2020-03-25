@@ -9,9 +9,7 @@ const getSingleFarmerWithCows = (farmerId) => new Promise((resolve, reject) => {
       farmer.id = farmerId;
       farmer.cows = [];
       farmerCowData.getFarmerCowByFarmerUid(farmer.uid).then((farmerCows) => {
-        console.error('farmer cows', farmerCows);
         cowData.getCows().then((allCows) => {
-          console.error(allCows);
           farmerCows.forEach((farmerCow) => {
             const cow = allCows.find((x) => x.id === farmerCow.cowId);
             farmer.cows.push(cow);
