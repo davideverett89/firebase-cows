@@ -26,6 +26,8 @@ const checkLoginStatus = () => {
       pastureDiv.addClass('hide');
       farmHouseDiv.addClass('hide');
       logoutButton.addClass('hide');
+      singleFarmerDiv.addClass('hide');
+      singleFarmerDiv.html('');
     }
   });
 };
