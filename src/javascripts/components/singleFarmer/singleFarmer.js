@@ -1,9 +1,9 @@
-import farmerData from '../../helpers/data/farmerData';
+import smash from '../../helpers/data/smash';
 import utils from '../../helpers/utils';
 
 const buildFarmer = (e) => {
   const farmerId = e.target.closest('.card').id;
-  farmerData.getFarmerById(farmerId)
+  smash.getSingleFarmerWithCows(farmerId)
     .then((response) => {
       const singleFarmer = response.data;
       let domString = '';
